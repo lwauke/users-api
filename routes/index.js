@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 const CREDENTIALS_ERR_MESSAGE = 'Usuário ou senha incorretos';
+
 router.post('/login', async function(req, res, next) {
   const { username, password } = req.body;
   const user = users.find(user => user.username === username);
